@@ -1,0 +1,271 @@
+fileFormatVersion: 2
+guid: 1c9d1f4241cfe454aa7bc6bafab566d6
+timeCreated: 1506341413
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Van_Eyck_-_Arnolfini_Portrait_0
+    21300002: Van_Eyck_-_Arnolfini_Portrait_1
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Van_Eyck_-_Arnolfini_Portrait_0
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 2703
+        width: 528
+        height: 521
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 203.8186, y: 132.81616}
+        - {x: 199.44397, y: 126.293945}
+        - {x: 190.13916, y: 120.99536}
+        - {x: 178.4884, y: 120.7583}
+        - {x: 167.03992, y: 124.59619}
+        - {x: 159.56445, y: 132.95312}
+        - {x: 157.78711, y: 143.02783}
+        - {x: 159.40747, y: 150.87842}
+        - {x: 164.94824, y: 158.3706}
+        - {x: 174.77136, y: 163.40503}
+        - {x: 177.70898, y: 174.67017}
+        - {x: 108.962524, y: 231.71875}
+        - {x: 106.0719, y: 230.55005}
+        - {x: 103.075806, y: 220.15942}
+        - {x: 100.337036, y: 208.62036}
+        - {x: 92.45215, y: 201.03833}
+        - {x: 82.19226, y: 194.66553}
+        - {x: 69.875, y: 193.23535}
+        - {x: 59.395386, y: 196.36743}
+        - {x: 52.282837, y: 205.46558}
+        - {x: 48.225586, y: 214.51953}
+        - {x: 47.697754, y: 224.43457}
+        - {x: 49.706177, y: 231.69556}
+        - {x: 50.343506, y: 241.83325}
+        - {x: 44.67456, y: 248.23828}
+        - {x: -44.3667, y: 248.89111}
+        - {x: -50.85254, y: 243.1399}
+        - {x: -54.855835, y: 234.28833}
+        - {x: -46.696167, y: 223.12793}
+        - {x: -48.35681, y: 208.36084}
+        - {x: -55.065186, y: 196.40918}
+        - {x: -64.915405, y: 188.72632}
+        - {x: -78.525635, y: 187.479}
+        - {x: -89.58923, y: 189.6958}
+        - {x: -98.78967, y: 196.92114}
+        - {x: -103.16077, y: 202.99512}
+        - {x: -103.364746, y: 211.21045}
+        - {x: -108.420654, y: 220.0232}
+        - {x: -120.88672, y: 223.01367}
+        - {x: -181.59998, y: 177.51538}
+        - {x: -182.60669, y: 164.92944}
+        - {x: -180.5232, y: 159.01685}
+        - {x: -173.15808, y: 153.1521}
+        - {x: -164.64453, y: 145.8606}
+        - {x: -163.8352, y: 136.56494}
+        - {x: -166.40393, y: 126.14258}
+        - {x: -173.45886, y: 116.086914}
+        - {x: -181.53479, y: 110.768555}
+        - {x: -193.74133, y: 111.224365}
+        - {x: -204.42908, y: 115.27344}
+        - {x: -210.89966, y: 120.41138}
+        - {x: -216.0127, y: 127.9751}
+        - {x: -227.32361, y: 125.07959}
+        - {x: -254.44482, y: 45.103516}
+        - {x: -250.35706, y: 34.157715}
+        - {x: -244.40247, y: 34.918457}
+        - {x: -234.11426, y: 35.74536}
+        - {x: -225.91309, y: 34.079834}
+        - {x: -216.39075, y: 31.329102}
+        - {x: -211.37769, y: 25.58081}
+        - {x: -207.29321, y: 20.028076}
+        - {x: -206.55322, y: 7.569092}
+        - {x: -207.51941, y: -3.7155762}
+        - {x: -212.78003, y: -14.548584}
+        - {x: -221.71497, y: -23.311523}
+        - {x: -232.95178, y: -26.168701}
+        - {x: -243.9508, y: -26.548828}
+        - {x: -248.73059, y: -40.50293}
+        - {x: -229.4397, y: -112.03638}
+        - {x: -223.31128, y: -115.819336}
+        - {x: -212.45093, y: -114.50171}
+        - {x: -206.1637, y: -107.12988}
+        - {x: -197.2218, y: -100.42236}
+        - {x: -183.62524, y: -99.12598}
+        - {x: -170.54395, y: -104.53784}
+        - {x: -161.66553, y: -111.82202}
+        - {x: -157.42163, y: -120.698}
+        - {x: -155.27576, y: -133.49243}
+        - {x: -156.65857, y: -145.02515}
+        - {x: -163.26538, y: -153.58545}
+        - {x: -174.80188, y: -163.20068}
+        - {x: -180.16162, y: -169.39673}
+        - {x: -176.32898, y: -179.29395}
+        - {x: -122.28247, y: -219.1792}
+        - {x: -110.29907, y: -225.71045}
+        - {x: -102.35132, y: -223.21802}
+        - {x: -96.632324, y: -219.76978}
+        - {x: -94.83618, y: -209.23218}
+        - {x: -88.8855, y: -200.29028}
+        - {x: -80.44031, y: -193.78271}
+        - {x: -71.20984, y: -190.81226}
+        - {x: -59.76123, y: -192.28198}
+        - {x: -48.81726, y: -194.58081}
+        - {x: -41.0979, y: -202.35864}
+        - {x: -36.590454, y: -213.08032}
+        - {x: -35.45935, y: -223.89941}
+        - {x: -37.538574, y: -235.7085}
+        - {x: -34.885254, y: -245.02539}
+        - {x: -25.46289, y: -247.4834}
+        - {x: 37.63159, y: -245.62842}
+        - {x: 45.813477, y: -242.86426}
+        - {x: 45.769287, y: -228.7771}
+        - {x: 43.291504, y: -220.07104}
+        - {x: 43.257324, y: -207.22632}
+        - {x: 43.681274, y: -198.75732}
+        - {x: 49.168945, y: -190.5791}
+        - {x: 57.89856, y: -182.23047}
+        - {x: 66.51611, y: -178.01855}
+        - {x: 75.04639, y: -178.38013}
+        - {x: 86.11072, y: -183.45264}
+        - {x: 93.990234, y: -190.6875}
+        - {x: 97.956055, y: -200.44287}
+        - {x: 101.6073, y: -213.29834}
+        - {x: 114.44165, y: -217.55835}
+        - {x: 166.7716, y: -172.54736}
+        - {x: 172.45166, y: -164.87329}
+        - {x: 173.67078, y: -153.47266}
+        - {x: 168.98035, y: -149.51562}
+        - {x: 160.30566, y: -147.47461}
+        - {x: 154.3418, y: -142.1836}
+        - {x: 152.13354, y: -134.45874}
+        - {x: 150.98096, y: -124.9458}
+        - {x: 152.99084, y: -115.93091}
+        - {x: 158.56311, y: -107.38696}
+        - {x: 166.7804, y: -97.97876}
+        - {x: 177.7511, y: -95.28735}
+        - {x: 188.34387, y: -99.35254}
+        - {x: 198.25586, y: -103.43213}
+        - {x: 203.6195, y: -112.61621}
+        - {x: 212.43506, y: -113.80884}
+        - {x: 243.75378, y: -39.564453}
+        - {x: 242.95776, y: -31.759521}
+        - {x: 236.65918, y: -29.77417}
+        - {x: 227.19495, y: -27.896729}
+        - {x: 214.67969, y: -26.958984}
+        - {x: 204.46045, y: -21.180176}
+        - {x: 196.15454, y: -11.876709}
+        - {x: 193.87903, y: -2.734375}
+        - {x: 194.29163, y: 6.5654297}
+        - {x: 195.85193, y: 15.28125}
+        - {x: 200.00427, y: 23.593994}
+        - {x: 206.7102, y: 30.07959}
+        - {x: 213.82227, y: 35.929443}
+        - {x: 224.30127, y: 35.093994}
+        - {x: 234.89514, y: 35.83618}
+        - {x: 239.31409, y: 41.016846}
+        - {x: 214.62793, y: 130.01685}
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Van_Eyck_-_Arnolfini_Portrait_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 3087
+        height: 4226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -1543.5, y: 2113}
+        - {x: -1543.5, y: -2113}
+        - {x: 1543.5, y: -2113}
+        - {x: 1543.5, y: 2113}
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
