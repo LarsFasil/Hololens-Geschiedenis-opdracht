@@ -18,7 +18,7 @@ public class WorldCursor : MonoBehaviour
         // head position and orientation.
         var headPosition = Camera.main.transform.position;
         var gazeDirection = Camera.main.transform.forward;
-
+        RaycastHit2D hitinfo2d;
         RaycastHit hitInfo;
 
         if (Physics.Raycast(headPosition, gazeDirection, out hitInfo))
