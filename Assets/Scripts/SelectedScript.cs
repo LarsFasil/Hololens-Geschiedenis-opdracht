@@ -6,7 +6,7 @@ public class SelectedScript : MonoBehaviour
     void OnSelect()
     {
         transform.parent.parent = null;
-        //SpriteBehaviourScript.lerp1 = true;
+        SpriteBehaviourScript.lerp1 = true;
        
     }
 }
