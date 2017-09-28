@@ -2,24 +2,59 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpriteBehaviourScript : MonoBehaviour {
+public class SpriteBehaviourScript : MonoBehaviour
+{
 
-    public static GameObject schilderij;
-    private static Transform[] allChildren;
-    // Use this for initialization
-    void Start () {
-        schilderij = GameObject.FindWithTag("schilderij");
-		allChildren = schilderij.gameObject.GetComponentsInChildren<Transform>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-       // schilderij.transform.GetComponentsInChildren<Transform>();
-	}
+    public bool lerp1;
+    private float t, eind, start;
+    public float afstand = 90.0f;
+    public float snelheid = .3f;
+    public GameObject schilderij;
+    private Vector3 sPos, begin;
 
-    public static void ScriptSelected(Transform selectedTrans)
+    void Start()
     {
-        selectedTrans.parent = null;
-        schilderij.transform.position = new Vector3(schilderij.transform.position.x, schilderij.transform.position.y, (schilderij.transform.position.z + 90f));
+        
+        lerp1 = false;
+        t = 0f;
+        begin = schilderij.transform.position;
+        sPos = Vector3.zero;
+    }
+
+    void Update()
+    {
+        BGLerp();
+    }
+
+    public void BGLerp()
+    {
+        if (lerp1)
+        {
+            if (sPos == Vector3.zero)
+            {
+                sPos = schilderij.transform.position;
+                start = sPos.z;
+                if (start > begin.z)
+                {
+                    eind = start - afstand;
+                }
+                else
+                {
+                    eind = start + afstand;
+                }
+            }
+
+            sPos = new Vector3(sPos.x, sPos.y, Mathf.Lerp(start, eind, t));
+            schilderij.transform.position = sPos;
+            t += snelheid * Time.deltaTime;
+
+            if (Mathf.Abs(eind - schilderij.transform.position.z) < 0.02f)
+            {
+                lerp1 = false;
+                schilderij.transform.position = new Vector3(sPos.x, sPos.y, eind);
+                sPos = Vector3.zero;
+                t = 0f;
+            }
+        }
     }
 }
