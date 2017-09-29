@@ -7,6 +7,7 @@ public class GazeGestureManager : MonoBehaviour
 
     // Represents the hologram that is currently being gazed at.
     public GameObject FocusedObject { get; private set; }
+    public bool updateFocusedObject = true;
 
     GestureRecognizer recognizer;
 
@@ -17,12 +18,37 @@ public class GazeGestureManager : MonoBehaviour
 
         // Set up a GestureRecognizer to detect Select gestures.
         recognizer = new GestureRecognizer();
+        recognizer.SetRecognizableGestures(GestureSettings.Hold | GestureSettings.Tap);
         recognizer.TappedEvent += (source, tapCount, ray) =>
         {
             // Send an OnSelect message to the focused object and its ancestors.
             if (FocusedObject != null)
             {
                 FocusedObject.SendMessageUpwards("OnSelect", SendMessageOptions.DontRequireReceiver);
+            }
+        };
+        recognizer.HoldStartedEvent += (source, ray) =>
+        {
+            if (FocusedObject != null)
+            {
+                updateFocusedObject = false;
+                FocusedObject.SendMessageUpwards("OnHoldStart");
+            }
+        };
+        recognizer.HoldCompletedEvent += (source, ray) =>
+        {
+            if (FocusedObject != null)
+            {
+                updateFocusedObject = false;
+                FocusedObject.SendMessageUpwards("OnHoldCompleted");
+            }
+        };
+        recognizer.HoldCanceledEvent += (source, ray) =>
+        {
+            if (FocusedObject != null)
+            {
+                updateFocusedObject = false;
+                FocusedObject.SendMessageUpwards("OnHoldCompleted");
             }
         };
         recognizer.StartCapturingGestures();
