@@ -8,12 +8,12 @@ public class SelectedScript : MonoBehaviour
     void OnHoldStart()
     {
         holding = true;
-        SpatialMapping.Instance.DrawVisualMeshes = true;
+        //SpatialMapping.Instance.DrawVisualMeshes = true;
     }
 
     void OnHoldCompleted()
     {
-        SpatialMapping.Instance.DrawVisualMeshes = false;
+        //SpatialMapping.Instance.DrawVisualMeshes = false;
         holding = false;
     }
 
