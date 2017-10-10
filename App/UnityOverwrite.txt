@@ -5,27 +5,20 @@
 # Write a line equal to 'overwrite-all' (without quotes) to overwrite everything (preserved accross builds)
 # Write a line equal to 'keep-all' (without quotes) to keep files regardless their modification (preserved accross builds)
 # Default behavior is to never overwrite files
-Hololens Template.sln: modified
-GeneratedProjects\UWP\Assembly-CSharp\project.json: 4FCF72A4D5EDB37E24C206A7BCFE7AF1
-GeneratedProjects\UWP\Assembly-CSharp-firstpass\project.json: 4FCF72A4D5EDB37E24C206A7BCFE7AF1
-Hololens Template\App.cs: A4B985C0B0B322137FC86A6D6BF96885
-Hololens Template\Hololens Template.csproj: 72E4E5AC852CC465AB9BA69B733B9ACF
-Hololens Template\Hololens Template.csproj.user: modified
-Hololens Template\Package.appxmanifest: FF1D07CC33919C84045B7F8BACFAFFEB
-Hololens Template\project.json: 1D02BC64BAC0D041019673A1C4C51737
-Hololens Template\Assets\SplashScreen.scale-200.png: 60618416282ED104FD1473935716045D
-Hololens Template\Assets\Square150x150Logo.scale-200.png: E02834B4A5DFB97FF8E212C1CACBB084
-Hololens Template\Assets\Square44x44Logo.scale-200.png: 6C6EF27184ABE9D870A9D564953775DE
-Hololens Template\Assets\Square44x44Logo.targetsize-24_altform-unplated.png: 156637F7B5363E983E7A46D8E533A23D
-Hololens Template\Assets\StoreLogo.png: 90BD194CA4A7CFFF3E8B8222229857FB
-Hololens Template\Assets\Wide310x150Logo.scale-200.png: C96846A80DF667F87355569CD816192D
-Hololens Template\bin\x86\Release\AppX\Assets\SplashScreen.scale-200.png: 60618416282ED104FD1473935716045D
-Hololens Template\bin\x86\Release\AppX\Assets\Square150x150Logo.scale-200.png: E02834B4A5DFB97FF8E212C1CACBB084
-Hololens Template\bin\x86\Release\AppX\Assets\Square44x44Logo.scale-200.png: 6C6EF27184ABE9D870A9D564953775DE
-Hololens Template\bin\x86\Release\AppX\Assets\Square44x44Logo.targetsize-24_altform-unplated.png: 156637F7B5363E983E7A46D8E533A23D
-Hololens Template\bin\x86\Release\AppX\Assets\StoreLogo.png: 90BD194CA4A7CFFF3E8B8222229857FB
-Hololens Template\bin\x86\Release\AppX\Assets\Wide310x150Logo.scale-200.png: C96846A80DF667F87355569CD816192D
-Hololens Template\bin\x86\Release\AppX\Properties\Default.rd.xml: 72EB282657164E79A1C42F6240984826
-Hololens Template\obj\x86\Release\Hololens Template.csproj.CopyComplete: D41D8CD98F00B204E9800998ECF8427E
-Hololens Template\Properties\AssemblyInfo.cs: 59522BCEB2F5529AE0055ABF244C8C1F
-Hololens Template\Properties\Default.rd.xml: 72EB282657164E79A1C42F6240984826
+Hololens-Geschiedenis-opdracht.sln: modified
+GeneratedProjects\UWP\Assembly-CSharp\project.json: modified
+GeneratedProjects\UWP\Assembly-CSharp-firstpass\project.json: modified
+Hololens-Geschiedenis-opdracht\App.cs: CFA84494393EAEF9D34DAE0D077EA5F9
+Hololens-Geschiedenis-opdracht\Hololens-Geschiedenis-opdracht.csproj: 83088E730BDFFB1BF51600BE2BFBAA3B
+Hololens-Geschiedenis-opdracht\Hololens-Geschiedenis-opdracht.csproj.user: modified
+Hololens-Geschiedenis-opdracht\Package.appxmanifest: 0A74EEBA8E9F15FE74A88F5575BB05DC
+Hololens-Geschiedenis-opdracht\project.json: modified
+Hololens-Geschiedenis-opdracht\Assets\SplashScreen.scale-200.png: 60618416282ED104FD1473935716045D
+Hololens-Geschiedenis-opdracht\Assets\Square150x150Logo.scale-200.png: E02834B4A5DFB97FF8E212C1CACBB084
+Hololens-Geschiedenis-opdracht\Assets\Square44x44Logo.scale-200.png: 6C6EF27184ABE9D870A9D564953775DE
+Hololens-Geschiedenis-opdracht\Assets\Square44x44Logo.targetsize-24_altform-unplated.png: 156637F7B5363E983E7A46D8E533A23D
+Hololens-Geschiedenis-opdracht\Assets\StoreLogo.png: 90BD194CA4A7CFFF3E8B8222229857FB
+Hololens-Geschiedenis-opdracht\Assets\Wide310x150Logo.scale-200.png: C96846A80DF667F87355569CD816192D
+Hololens-Geschiedenis-opdracht\obj\x86\Release\Hololens-Geschiedenis-opdracht.csproj.CopyComplete: D41D8CD98F00B204E9800998ECF8427E
+Hololens-Geschiedenis-opdracht\Properties\AssemblyInfo.cs: EEC60E4A82EAAB53249EAE5A796E792C
+Hololens-Geschiedenis-opdracht\Properties\Default.rd.xml: 72EB282657164E79A1C42F6240984826

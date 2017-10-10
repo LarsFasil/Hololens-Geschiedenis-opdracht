@@ -1,4 +1,0 @@
-C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Hololens Template\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj;x86
-C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Hololens Template\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86
-C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Hololens Template\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj;x86
-C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Hololens Template\App\Hololens Template\Hololens Template.csproj;x86
