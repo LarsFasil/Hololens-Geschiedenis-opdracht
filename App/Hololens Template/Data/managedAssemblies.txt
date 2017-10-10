@@ -1,4 +1,3 @@
-Assembly-CSharp-firstpass.dll
 Assembly-CSharp.dll
 nunit.framework.dll
 UnityEngine.UI.dll

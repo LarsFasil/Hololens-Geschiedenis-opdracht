@@ -192,6 +192,8 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>.\Unprocessed\UnityEngine.Networking.dll</HintPath>
     </Reference>
+    <Content Include="PlaneFinding.dll" />
+    <Content Include="PlaneFinding.pdb" Condition="Exists('PlaneFinding.pdb')" />
     <Reference Include="UnityEngine.VR">
       <HintPath>.\Unprocessed\UnityEngine.VR.dll</HintPath>
     </Reference>
@@ -205,13 +207,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Hololens Template\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj">
-      <Project>{66dcf3e6-a1fc-4f74-b52f-b8d3d51f310c}</Project>
+    <ProjectReference Include="C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Projecten\Hololens-Geschiedenis-opdracht\App\GeneratedProjects\UWP\Assembly-CSharp\Assembly-CSharp.csproj">
+      <Project>{d8baf3c2-8372-42ef-bf6d-572fa11320e3}</Project>
       <Name>Assembly-CSharp</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Hololens Template\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj">
-      <Project>{14dbc17b-cad6-442f-b348-d2725f5dd1df}</Project>
+    <ProjectReference Include="C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Projecten\Hololens-Geschiedenis-opdracht\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj">
+      <Project>{1d7e2a6f-1868-4da3-b077-329ee4f83fa6}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
       <Private>False</Private>
     </ProjectReference>
@@ -257,6 +259,12 @@
    </_GenerateAppxManifestDependsOn>
   </PropertyGroup>
 
+  <Target Name="BeforeResolveReferences" Condition="'$(BuildingProject)' == 'true'" > 
+        <Copy SourceFiles="$(ProjectDir)Plugins\$(PlatformShortName)\PlaneFinding.dll" DestinationFiles="$(ProjectDir)PlaneFinding.dll" />
+            <Delete Files="$(ProjectDir)PlaneFinding.pdb" Condition="Exists('$(ProjectDir)PlaneFinding.pdb')" />
+            <Delete Files="$(ProjectDir)PlaneFinding.dll.mdb" Condition="Exists('$(ProjectDir)PlaneFinding.dll.mdb')" />
+            <Copy SourceFiles="$(ProjectDir)Plugins\$(PlatformShortName)\PlaneFinding.pdb" DestinationFiles="$(ProjectDir)PlaneFinding.pdb" Condition="Exists('$(ProjectDir)Plugins\$(PlatformShortName)\PlaneFinding.pdb')" />
+   </Target>
   <Target Name="ModifyAppXPackage" Condition="'$(BuildingProject)' == 'true'" > 
         <Message Importance="high" Text="UnityWSAPlayerDir &quot;$(UnityWSAPlayerDir)&quot;." />
         <Message Importance="high" Text="UnityProjectDir &quot;$(UnityProjectDir)&quot;." />

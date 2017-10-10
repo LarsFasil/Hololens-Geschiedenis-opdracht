@@ -1,8 +1,8 @@
 ﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     <PropertyGroup>
         <UnityWSASolutionName>Hololens Template</UnityWSASolutionName>
-        <UnityWSASolutionDir>C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Hololens Template\App\</UnityWSASolutionDir>
-        <UnityProjectDir>C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Hololens Template\</UnityProjectDir>
+        <UnityWSASolutionDir>C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Projecten\Hololens-Geschiedenis-opdracht\App\</UnityWSASolutionDir>
+        <UnityProjectDir>C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Projecten\Hololens-Geschiedenis-opdracht\</UnityProjectDir>
         <UnityWSAPlayerDir>C:\Program Files\Unity\Editor\Data\PlaybackEngines\MetroSupport\</UnityWSAPlayerDir>
         <UnityWSAToolsDir>$(UnityWSASolutionDir)Unity\Tools\</UnityWSAToolsDir>
     </PropertyGroup>

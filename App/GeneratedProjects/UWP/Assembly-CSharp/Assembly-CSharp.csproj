@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{66dcf3e6-a1fc-4f74-b52f-b8d3d51f310c}</ProjectGuid>
+    <ProjectGuid>{d8baf3c2-8372-42ef-bf6d-572fa11320e3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AssemblyCSharpWSA</RootNamespace>
@@ -130,8 +130,8 @@
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Hololens Template\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj">
-      <Project>{14dbc17b-cad6-442f-b348-d2725f5dd1df}</Project>
+    <ProjectReference Include="C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Projecten\Hololens-Geschiedenis-opdracht\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj">
+      <Project>{1d7e2a6f-1868-4da3-b077-329ee4f83fa6}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <Reference Include="UnityEngine">
@@ -183,7 +183,7 @@
     <Message Importance="high" Text="Running SerializationWeaver..." />
     <Move SourceFiles="@(IntermediateAssembly)" DestinationFolder="$(TargetDir)Unprocessed" OverwriteReadOnlyFiles="true" />
     <Move SourceFiles="@(IntermediateAssembly-&gt;'%(RelativeDir)%(Filename).pdb')" DestinationFolder="$(TargetDir)Unprocessed" Condition="Exists('@(IntermediateAssembly-&gt;'%(RelativeDir)%(Filename).pdb')')" OverwriteReadOnlyFiles="true" />
-    <Exec Command="&quot;$(UnityWSAToolsDir)SerializationWeaver\SerializationWeaver.exe&quot; &quot;$(TargetDir)Unprocessed\$(TargetFileName)&quot; &quot;-pdb&quot; &quot;-verbose&quot; &quot;-unity-engine=$(UnityWSASolutionDir)$(UnityWSASolutionName)\Unprocessed\UnityEngine.dll&quot; &quot;$([System.IO.Path]::GetFullPath('$(IntermediateOutputPath)').TrimEnd('\'))&quot; &quot;-lock=$([System.IO.Path]::Combine('$(ProjectDir)', 'project.lock.json'))&quot; &quot;@C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Hololens Template\App\GeneratedProjects\UWP\Assembly-CSharp\SerializationWeaverArgs.txt&quot; &quot;-additionalAssemblyPath=$(UnityWSASolutionDir)$(UnityWSASolutionName)\Unprocessed&quot; &quot;-unity-networking=$(UnityWSASolutionDir)$(UnityWSASolutionName)\Unprocessed\UnityEngine.Networking.dll&quot; &quot;-additionalAssemblyPath=$(UnityWSASolutionDir)GeneratedProjects\UWP\Assembly-CSharp-firstpass\bin\$(PlatformName)\$(ConfigurationName)&quot;" />
+    <Exec Command="&quot;$(UnityWSAToolsDir)SerializationWeaver\SerializationWeaver.exe&quot; &quot;$(TargetDir)Unprocessed\$(TargetFileName)&quot; &quot;-pdb&quot; &quot;-verbose&quot; &quot;-unity-engine=$(UnityWSASolutionDir)$(UnityWSASolutionName)\Unprocessed\UnityEngine.dll&quot; &quot;$([System.IO.Path]::GetFullPath('$(IntermediateOutputPath)').TrimEnd('\'))&quot; &quot;-lock=$([System.IO.Path]::Combine('$(ProjectDir)', 'project.lock.json'))&quot; &quot;@C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Projecten\Hololens-Geschiedenis-opdracht\App\GeneratedProjects\UWP\Assembly-CSharp\SerializationWeaverArgs.txt&quot; &quot;-additionalAssemblyPath=$(UnityWSASolutionDir)$(UnityWSASolutionName)\Unprocessed&quot; &quot;-unity-networking=$(UnityWSASolutionDir)$(UnityWSASolutionName)\Unprocessed\UnityEngine.Networking.dll&quot; &quot;-additionalAssemblyPath=$(UnityWSASolutionDir)GeneratedProjects\UWP\Assembly-CSharp-firstpass\bin\$(PlatformName)\$(ConfigurationName)&quot;" />
     <Message Importance="high" Text="SerializationWeaver done." />
   </Target>
   <PropertyGroup>

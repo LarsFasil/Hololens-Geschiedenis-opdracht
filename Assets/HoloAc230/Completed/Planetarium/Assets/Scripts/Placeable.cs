@@ -126,15 +126,20 @@ public class Placeable : MonoBehaviour
     public void OnSelect()
     {
         /* TODO: 4.a CODE ALONG 4.a */
-
-        if (!IsPlacing)
+        
+        if (!IsPlacing && this.GetComponent<BoxCollider>().size.z == 0.05)
         {
+            this.GetComponent<BoxCollider>().size = new Vector3(this.GetComponent<BoxCollider>().size.x, this.GetComponent<BoxCollider>().size.y, 0.005f);
             OnPlacementStart();
+            return;
         }
-        else
+        if(IsPlacing)
         {
             OnPlacementStop();
+            return;
         }
+        transform.parent.parent = null;             //Maakt zichzelf los van zn parent object (schilderij)
+        SpriteBehaviourScript.lerp1 = true;         //Zegt tegen spritebehaviourscript dat de lerp moet beginne.
     }
 
     /// <summary>

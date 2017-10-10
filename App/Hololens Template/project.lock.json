@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "UAP,Version=v10.0": {
+    "UAP,Version=v10.0.10240": {
       "Microsoft.ApplicationInsights/1.0.0": {
         "type": "package",
         "compile": {
@@ -1917,21 +1917,6 @@
             "rid": "win8-aot"
           }
         }
-      },
-      "Assembly-CSharp/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0.10240",
-        "dependencies": {
-          "Assembly-CSharp-firstpass": "1.0.0",
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
-        }
-      },
-      "Assembly-CSharp-firstpass/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0.10240",
-        "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
-        }
       }
     },
     "UAP,Version=v10.0.10240/win10-arm": {
@@ -3707,21 +3692,6 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
-      },
-      "Assembly-CSharp/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0.10240",
-        "dependencies": {
-          "Assembly-CSharp-firstpass": "1.0.0",
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
-        }
-      },
-      "Assembly-CSharp-firstpass/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0.10240",
-        "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
-        }
       }
     },
     "UAP,Version=v10.0.10240/win10-arm-aot": {
@@ -5459,21 +5429,6 @@
         },
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
-        }
-      },
-      "Assembly-CSharp/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0.10240",
-        "dependencies": {
-          "Assembly-CSharp-firstpass": "1.0.0",
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
-        }
-      },
-      "Assembly-CSharp-firstpass/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0.10240",
-        "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
         }
       }
     },
@@ -7257,21 +7212,6 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
-      },
-      "Assembly-CSharp/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0.10240",
-        "dependencies": {
-          "Assembly-CSharp-firstpass": "1.0.0",
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
-        }
-      },
-      "Assembly-CSharp-firstpass/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0.10240",
-        "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
-        }
       }
     },
     "UAP,Version=v10.0.10240/win10-x64-aot": {
@@ -9009,21 +8949,6 @@
         },
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
-        }
-      },
-      "Assembly-CSharp/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0.10240",
-        "dependencies": {
-          "Assembly-CSharp-firstpass": "1.0.0",
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
-        }
-      },
-      "Assembly-CSharp-firstpass/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0.10240",
-        "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
         }
       }
     },
@@ -10807,21 +10732,6 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
-      },
-      "Assembly-CSharp/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0.10240",
-        "dependencies": {
-          "Assembly-CSharp-firstpass": "1.0.0",
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
-        }
-      },
-      "Assembly-CSharp-firstpass/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0.10240",
-        "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
-        }
       }
     },
     "UAP,Version=v10.0.10240/win10-x86-aot": {
@@ -12559,21 +12469,6 @@
         },
         "runtime": {
           "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
-        }
-      },
-      "Assembly-CSharp/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0.10240",
-        "dependencies": {
-          "Assembly-CSharp-firstpass": "1.0.0",
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
-        }
-      },
-      "Assembly-CSharp-firstpass/1.0.0": {
-        "type": "project",
-        "framework": "UAP,Version=v10.0.10240",
-        "dependencies": {
-          "Microsoft.NETCore.UniversalWindowsPlatform": "5.0.0"
         }
       }
     }
@@ -15867,16 +15762,6 @@
         "runtime.json",
         "runtimes/win8-aot/lib/netcore50/System.Xml.XmlSerializer.dll"
       ]
-    },
-    "Assembly-CSharp/1.0.0": {
-      "type": "project",
-      "path": "../GeneratedProjects/UWP/Assembly-CSharp/project.json",
-      "msbuildProject": "../GeneratedProjects/UWP/Assembly-CSharp/Assembly-CSharp.csproj"
-    },
-    "Assembly-CSharp-firstpass/1.0.0": {
-      "type": "project",
-      "path": "../GeneratedProjects/UWP/Assembly-CSharp-firstpass/project.json",
-      "msbuildProject": "../GeneratedProjects/UWP/Assembly-CSharp-firstpass/Assembly-CSharp-firstpass.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -15893,12 +15778,12 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\lars_\\Desktop\\Hololens projects Lars Fasil\\Hololens Template\\App\\Hololens Template\\Hololens Template.csproj",
+      "projectUniqueName": "C:\\Users\\lars_\\Desktop\\Hololens projects Lars Fasil\\Projecten\\Hololens-Geschiedenis-opdracht\\App\\Hololens Template\\Hololens Template.csproj",
       "projectName": "Hololens Template",
-      "projectPath": "C:\\Users\\lars_\\Desktop\\Hololens projects Lars Fasil\\Hololens Template\\App\\Hololens Template\\Hololens Template.csproj",
-      "projectJsonPath": "C:\\Users\\lars_\\Desktop\\Hololens projects Lars Fasil\\Hololens Template\\App\\Hololens Template\\project.json",
+      "projectPath": "C:\\Users\\lars_\\Desktop\\Hololens projects Lars Fasil\\Projecten\\Hololens-Geschiedenis-opdracht\\App\\Hololens Template\\Hololens Template.csproj",
+      "projectJsonPath": "C:\\Users\\lars_\\Desktop\\Hololens projects Lars Fasil\\Projecten\\Hololens-Geschiedenis-opdracht\\App\\Hololens Template\\project.json",
       "packagesPath": "C:\\Users\\lars_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lars_\\Desktop\\Hololens projects Lars Fasil\\Hololens Template\\App\\Hololens Template\\obj\\",
+      "outputPath": "C:\\Users\\lars_\\Desktop\\Hololens projects Lars Fasil\\Projecten\\Hololens-Geschiedenis-opdracht\\App\\Hololens Template\\obj\\",
       "projectStyle": "ProjectJson",
       "configFilePaths": [
         "C:\\Users\\lars_\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -15907,18 +15792,6 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
-      },
-      "frameworks": {
-        "uap10.0.10240": {
-          "projectReferences": {
-            "C:\\Users\\lars_\\Desktop\\Hololens projects Lars Fasil\\Hololens Template\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj": {
-              "projectPath": "C:\\Users\\lars_\\Desktop\\Hololens projects Lars Fasil\\Hololens Template\\App\\GeneratedProjects\\UWP\\Assembly-CSharp\\Assembly-CSharp.csproj"
-            },
-            "C:\\Users\\lars_\\Desktop\\Hololens projects Lars Fasil\\Hololens Template\\App\\GeneratedProjects\\UWP\\Assembly-CSharp-firstpass\\Assembly-CSharp-firstpass.csproj": {
-              "projectPath": "C:\\Users\\lars_\\Desktop\\Hololens projects Lars Fasil\\Hololens Template\\App\\GeneratedProjects\\UWP\\Assembly-CSharp-firstpass\\Assembly-CSharp-firstpass.csproj"
-            }
-          }
-        }
       }
     },
     "dependencies": {
