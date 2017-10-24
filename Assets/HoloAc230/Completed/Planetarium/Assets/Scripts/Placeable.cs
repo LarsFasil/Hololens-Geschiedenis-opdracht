@@ -93,7 +93,7 @@ public class Placeable : MonoBehaviour
     /// <summary>
     /// Called when the GameObject is created.
     /// </summary>
-    private void Awake()
+    private void Start()
     {
         targetPosition = gameObject.transform.position;
 
@@ -125,21 +125,32 @@ public class Placeable : MonoBehaviour
     /// </summary>
     public void OnSelect()
     {
-        /* TODO: 4.a CODE ALONG 4.a */
-        
-        if (!IsPlacing && this.GetComponent<BoxCollider>().size.z == 0.05)
+        Debug.Log("OnSELECT   " + this.GetComponent<BoxCollider>().size.z);
+        if (!IsPlacing)
         {
-            this.GetComponent<BoxCollider>().size = new Vector3(this.GetComponent<BoxCollider>().size.x, this.GetComponent<BoxCollider>().size.y, 0.005f);
+            if (gameObject.tag != "Schilderij" && gameObject.tag != "schilderij")
+            {
+                transform.parent.parent = null;             //Maakt zichzelf los van zn parent object (schilderij)
+                SpriteBehaviourScript.lerp1 = true;         //Zegt tegen spritebehaviourscript dat de lerp moet beginne.
+            }
+            Debug.Log("in placing");
             OnPlacementStart();
             return;
         }
         if(IsPlacing)
         {
             OnPlacementStop();
+            if (gameObject.tag == "schilderij")
+            {
+                Debug.Log("changed");
+                this.GetComponent<ActivatePlacableChildren>().LoopDoorChildren();
+                this.GetComponent<BoxCollider>().size = new Vector3(this.GetComponent<BoxCollider>().size.x, this.GetComponent<BoxCollider>().size.y, 0.005f);
+                gameObject.tag = "Schilderij";
+            }
+            
             return;
         }
-        transform.parent.parent = null;             //Maakt zichzelf los van zn parent object (schilderij)
-        SpriteBehaviourScript.lerp1 = true;         //Zegt tegen spritebehaviourscript dat de lerp moet beginne.
+
     }
 
     /// <summary>

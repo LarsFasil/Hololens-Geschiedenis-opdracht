@@ -103,6 +103,7 @@
     <Compile Include="Assets\HoloAc230\Completed\Planetarium\Assets\hltksptlm\SpatialMapping\Scripts\SurfaceMeshesToPlanes.cs" />
     <Compile Include="Assets\HoloAc230\Completed\Planetarium\Assets\hltksptlm\SpatialMapping\Scripts\SurfacePlane.cs" />
     <Compile Include="Assets\HoloAc230\Completed\Planetarium\Assets\hltksptlm\Utilities\Scripts\Singleton.cs" />
+    <Compile Include="Assets\Scripts\ActivatePlacableChildren.cs" />
     <Compile Include="Assets\Scripts\CubeScript.cs" />
     <Compile Include="Assets\Scripts\GazeGestureManager.cs" />
     <Compile Include="Assets\Scripts\SelectedScript.cs" />

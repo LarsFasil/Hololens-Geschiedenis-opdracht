@@ -136,7 +136,7 @@ public class PlaySpaceManager : Singleton<PlaySpaceManager>
             // and use horizontal/vertical planes to set their starting positions.
             // Call SpaceCollectionManager.Instance.GenerateItemsInWorld().
             // Pass in the lists of horizontal and vertical planes that we found earlier.
-            SpaceCollectionManager.Instance.GenerateItemsInWorld(horizontal, vertical);
+            //SpaceCollectionManager.Instance.GenerateItemsInWorld(horizontal, vertical);
         }
         else
         {
