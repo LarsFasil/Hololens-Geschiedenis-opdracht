@@ -6,22 +6,20 @@ public class SpriteBehaviourScript : MonoBehaviour
 {
     public bool testLerp = false;
     public static bool lerp1;
-    private float t, eind, start;
+    private float t;
     private bool heen = true;
     public float afstand = 5.0f;
     public float snelheid = .4f;
     public GameObject schilderij;
-    private Vector3 sPos, begin;
+    private Vector3 sPos, begin, eind, start;
     public SpriteRenderer sprite;
     private Color c, sC, eC;
-    private float alphaLevel = 255;
 
     void Start()
     {
         c = sprite.color;
         lerp1 = false;
         t = 0f;
-        //begin = schilderij.transform.position;
         sPos = Vector3.zero;
 
 
@@ -39,35 +37,32 @@ public class SpriteBehaviourScript : MonoBehaviour
 
             if (sPos == Vector3.zero && heen == true)                                                       //Deze if statement zorgt ervoor dat je met 1 bool(lerp1) de achtergrond beide kanten op kan laten gaan. En reset wat nodige variabele.
             {
-                sPos = schilderij.transform.position;                                  //Update de variabele sPos voor de nieuwe lerp.
-                start = sPos.z;                                                        //Update de start variabele, vanaf die positie begint de beweging.
-                eind = start + afstand;
+                sPos = schilderij.transform.localPosition;                                  //Update de variabele sPos voor de nieuwe lerp.
+                start = sPos;                                                        //Update de start variabele, vanaf die positie begint de beweging.
+                eind = start + (schilderij.transform.forward * afstand);
                 sC = c;
                 eC = new Color(c.r, c.g, c.b, 0);
             }
 
             if (sPos == Vector3.zero && heen == false)
             {
-                sPos = schilderij.transform.position;
-                start = sPos.z;
-                eind = start - afstand;
+                sPos = schilderij.transform.localPosition;
+                start = sPos;
+                eind = start - (schilderij.transform.forward * afstand);
                 sC = new Color(c.r, c.g, c.b, 0);
                 eC = c;
             }
 
-            sPos = new Vector3(sPos.x, sPos.y, Mathf.Lerp(start, eind, t));            //Sla nieuwe positie op in sPos.
-            schilderij.transform.position = sPos;                                      //Update de echte positie van het schilderij.
-            t += snelheid * Time.deltaTime;                                            //Update de tijd die de lerp erover moet doen.
-            sprite.color = Color.Lerp(sC, eC, t);
-            //sprite.color = new Color(c.r, c.g, c.b, alphaLevel);
-            //alphaLevel -= 1f;
+            schilderij.transform.localPosition = Vector3.Lerp(start, eind, t);
+            t += snelheid * Time.deltaTime;
+            sprite.color = Color.Lerp(sC, eC, t *3);
 
-            if (Mathf.Abs(eind - schilderij.transform.position.z) < 0.02f)             //Als het schilderij minder dan 0.02 units van het einde is verwijdert springt hij gelijk naar het eind.
+
+            if (Vector3.Distance(schilderij.transform.position, eind) < .02f)
             {
-                Debug.Log("done");
                 lerp1 = false;
                 testLerp = false;
-                schilderij.transform.position = new Vector3(sPos.x, sPos.y, eind);
+                schilderij.transform.localPosition = eind;
                 sPos = Vector3.zero;
                 heen = !heen;
                 t = 0f;
