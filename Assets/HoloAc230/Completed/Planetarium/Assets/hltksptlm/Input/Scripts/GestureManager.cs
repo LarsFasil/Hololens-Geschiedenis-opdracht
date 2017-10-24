@@ -51,7 +51,8 @@ namespace Academy.HoloToolkit.Unity
         {
             if (focusedObject != null)
             {
-                focusedObject.SendMessage("OnSelect");
+                //focusedObject.SendMessage("OnSelect");
+                focusedObject.GetComponent<Placeable>().OnSelect();
             }
         }
 

@@ -57,7 +57,7 @@ public class Placeable : MonoBehaviour
     private float lastDistance = 2.0f;
 
     // The distance away from the target surface that the object should hover prior while being placed.
-    private float hoverDistance = 0.15f;
+    private float hoverDistance = 0f;
 
     // Threshold (the closer to 0, the stricter the standard) used to determine if a surface is flat.
     private float distanceThreshold = 0.02f;
@@ -108,15 +108,15 @@ public class Placeable : MonoBehaviour
             boxCollider.enabled = false;
         }
 
-        // Create the object that will be used to indicate the bounds of the GameObject.
-        boundsAsset = GameObject.CreatePrimitive(PrimitiveType.Cube);
-        boundsAsset.transform.parent = gameObject.transform;
-        boundsAsset.SetActive(false);
+        //// Create the object that will be used to indicate the bounds of the GameObject.
+        //boundsAsset = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        //boundsAsset.transform.parent = gameObject.transform;
+        //boundsAsset.SetActive(false);
 
         // Create a object that will be used as a shadow.
-        shadowAsset = GameObject.CreatePrimitive(PrimitiveType.Quad);
-        shadowAsset.transform.parent = gameObject.transform;
-        shadowAsset.SetActive(false);
+        //shadowAsset = GameObject.CreatePrimitive(PrimitiveType.Quad);
+        //shadowAsset.transform.parent = gameObject.transform;
+        //shadowAsset.SetActive(false);
     }
 
     /// <summary>
@@ -132,6 +132,7 @@ public class Placeable : MonoBehaviour
             {
                 transform.parent.parent = null;             //Maakt zichzelf los van zn parent object (schilderij)
                 SpriteBehaviourScript.lerp1 = true;         //Zegt tegen spritebehaviourscript dat de lerp moet beginne.
+                return;
             }
             Debug.Log("in placing");
             OnPlacementStart();
@@ -146,6 +147,7 @@ public class Placeable : MonoBehaviour
                 this.GetComponent<ActivatePlacableChildren>().LoopDoorChildren();
                 this.GetComponent<BoxCollider>().size = new Vector3(this.GetComponent<BoxCollider>().size.x, this.GetComponent<BoxCollider>().size.y, 0.005f);
                 gameObject.tag = "Schilderij";
+                gameObject.GetComponent<Placeable>().enabled = false;
             }
             
             return;
@@ -168,31 +170,31 @@ public class Placeable : MonoBehaviour
             // Set the visual elements.
             Vector3 targetPosition;
             Vector3 surfaceNormal;
-            bool canBePlaced = ValidatePlacement(out targetPosition, out surfaceNormal);
-            DisplayBounds(canBePlaced);
-            DisplayShadow(targetPosition, surfaceNormal, canBePlaced);
+            //bool canBePlaced = ValidatePlacement(out targetPosition, out surfaceNormal);
+            //DisplayBounds(canBePlaced);
+            //DisplayShadow(targetPosition, surfaceNormal, canBePlaced);
         }
-        else
-        {
-            // Disable the visual elements.
-            boundsAsset.SetActive(false);
-            shadowAsset.SetActive(false);
+        //else
+        //{
+        //    // Disable the visual elements.
+        //    //boundsAsset.SetActive(false);
+        //    //shadowAsset.SetActive(false);
 
-            // Gracefully place the object on the target surface.
-            float dist = (gameObject.transform.position - targetPosition).magnitude;
-            if (dist > 0)
-            {
-                gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, targetPosition, placementVelocity / dist);
-            }
-            else
-            {
-                // Unhide the child object(s) to make placement easier.
-                for (int i = 0; i < ChildrenToHide.Count; i++)
-                {
-                    ChildrenToHide[i].SetActive(true);
-                }
-            }
-        }
+        //    // Gracefully place the object on the target surface.
+        //    float dist = (gameObject.transform.position - targetPosition).magnitude;
+        //    if (dist > 0)
+        //    {
+        //        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, targetPosition, placementVelocity / dist);
+        //    }
+        //    else
+        //    {
+        //        // Unhide the child object(s) to make placement easier.
+        //        for (int i = 0; i < ChildrenToHide.Count; i++)
+        //        {
+        //            ChildrenToHide[i].SetActive(true);
+        //        }
+        //    }
+        //}
     }
 
     /// <summary>
@@ -363,16 +365,16 @@ public class Placeable : MonoBehaviour
         Vector3 surfaceNormal;
 
         // Check to see if we can exit placement mode.
-        if (!ValidatePlacement(out position, out surfaceNormal))
-        {
-            return;
-        }
+        //if (!ValidatePlacement(out position, out surfaceNormal))
+        //{
+        //    return;
+        //}
 
         // The object is allowed to be placed.
         // We are placing at a small buffer away from the surface.
-        targetPosition = position + (0.01f * surfaceNormal);
+        //targetPosition = position + (0.01f * surfaceNormal);
 
-        OrientObject(true, surfaceNormal);
+        //OrientObject(true, surfaceNormal);
 
         // If we are managing the collider, disable it. 
         if (managingBoxCollider)
@@ -588,7 +590,7 @@ public class Placeable : MonoBehaviour
         // Unload objects we have created.
         Destroy(boundsAsset);
         boundsAsset = null;
-        Destroy(shadowAsset);
-        shadowAsset = null;
+        //Destroy(shadowAsset);
+        //shadowAsset = null;
     }
 }

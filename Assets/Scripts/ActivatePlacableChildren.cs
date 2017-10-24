@@ -11,7 +11,7 @@ public class ActivatePlacableChildren : MonoBehaviour {
 	void Start () {
         for (int i = 0; i < transform.childCount -1; i++)
         {
-            Children[i] = transform.GetChild(i).gameObject;
+            //Children[i] = transform.GetChild(i).gameObject;
 
         }
         
@@ -26,7 +26,7 @@ public class ActivatePlacableChildren : MonoBehaviour {
     {
         foreach (GameObject i in Children)
         {
-            i.SetActive(true);
+           // i.SetActive(true);
         }
         placeScripts = gameObject.GetComponentsInChildren<Placeable>();
         foreach (Placeable i in placeScripts)
