@@ -134,6 +134,14 @@ public class Placeable : MonoBehaviour
                 SpriteBehaviourScript.lerp1 = true;         //Zegt tegen spritebehaviourscript dat de lerp moet beginne.
                 return;
             }
+            if (gameObject.tag == "Schilderij" && gameObject.tag == "schilderij")
+            {
+                MeshRenderer[] spriteArray = GameObject.FindGameObjectWithTag("SurfacePlanes").GetComponentsInChildren<MeshRenderer>();
+                foreach (MeshRenderer i in spriteArray)
+                {
+                    i.enabled = true;
+                }
+            }
             Debug.Log("in placing");
             OnPlacementStart();
             return;
@@ -145,6 +153,11 @@ public class Placeable : MonoBehaviour
             {
                 Debug.Log("changed");
                 GameObject Manager = GameObject.FindGameObjectWithTag("SceneManager");
+                MeshRenderer[] spriteArray = GameObject.FindGameObjectWithTag("SurfacePlanes").GetComponentsInChildren<MeshRenderer>();
+                foreach (MeshRenderer i in spriteArray)
+                {
+                    i.enabled = false;
+                }
                 Manager.GetComponent<ActivatePlacableChildren>().LoopDoorChildren();
                 this.GetComponent<BoxCollider>().size = new Vector3(this.GetComponent<BoxCollider>().size.x, this.GetComponent<BoxCollider>().size.y, 0.005f);
                 gameObject.tag = "Schilderij";

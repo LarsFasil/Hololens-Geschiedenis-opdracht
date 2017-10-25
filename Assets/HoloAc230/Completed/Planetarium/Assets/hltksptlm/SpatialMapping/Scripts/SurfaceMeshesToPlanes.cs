@@ -102,6 +102,7 @@ namespace Academy.HoloToolkit.Unity
             makingPlanes = false;
             ActivePlanes = new List<GameObject>();
             planesParent = new GameObject("SurfacePlanes");
+            planesParent.tag = "SurfacePlanes";
             planesParent.transform.position = Vector3.zero;
             planesParent.transform.rotation = Quaternion.identity;
         }
