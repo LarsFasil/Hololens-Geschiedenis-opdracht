@@ -42,6 +42,7 @@ public class SpriteBehaviourScript : MonoBehaviour
                 eind = start + (schilderij.transform.forward * afstand);
                 sC = c;
                 eC = new Color(c.r, c.g, c.b, 0);
+                GetComponent<ActivatePlacableChildren>().HideKids();
             }
 
             if (sPos == Vector3.zero && heen == false)
@@ -60,6 +61,10 @@ public class SpriteBehaviourScript : MonoBehaviour
 
             if (Vector3.Distance(schilderij.transform.position, eind) < .02f)
             {
+                if (!heen)
+                {
+                    GetComponent<ActivatePlacableChildren>().HideKids();
+                }
                 lerp1 = false;
                 testLerp = false;
                 schilderij.transform.localPosition = eind;

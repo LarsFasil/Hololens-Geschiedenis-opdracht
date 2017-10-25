@@ -144,7 +144,8 @@ public class Placeable : MonoBehaviour
             if (gameObject.tag == "schilderij")
             {
                 Debug.Log("changed");
-                this.GetComponent<ActivatePlacableChildren>().LoopDoorChildren();
+                GameObject Manager = GameObject.FindGameObjectWithTag("SceneManager");
+                Manager.GetComponent<ActivatePlacableChildren>().LoopDoorChildren();
                 this.GetComponent<BoxCollider>().size = new Vector3(this.GetComponent<BoxCollider>().size.x, this.GetComponent<BoxCollider>().size.y, 0.005f);
                 gameObject.tag = "Schilderij";
                 gameObject.GetComponent<Placeable>().enabled = false;
