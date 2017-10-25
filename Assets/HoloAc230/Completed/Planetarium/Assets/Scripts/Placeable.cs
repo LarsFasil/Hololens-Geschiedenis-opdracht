@@ -87,16 +87,11 @@ public class Placeable : MonoBehaviour
     // This asset is sized using the box collider's bounds.
     private GameObject shadowAsset = null;
 
-    // The location at which the object will be placed.
-    private Vector3 targetPosition;
-
     /// <summary>
     /// Called when the GameObject is created.
     /// </summary>
     private void Start()
     {
-        targetPosition = gameObject.transform.position;
-
         // Get the object's collider.
         boxCollider = gameObject.GetComponent<BoxCollider>();
         if (boxCollider == null)
@@ -132,9 +127,12 @@ public class Placeable : MonoBehaviour
             {
                 transform.parent.parent = null;             //Maakt zichzelf los van zn parent object (schilderij)
                 SpriteBehaviourScript.lerp1 = true;         //Zegt tegen spritebehaviourscript dat de lerp moet beginne.
+                SpriteBehaviourScript.symbolToLerp = transform.parent.gameObject;
+                SpriteBehaviourScript.lerp2 = true;
+                Destroy(GetComponent<Placeable>());
                 return;
             }
-            if (gameObject.tag == "Schilderij" && gameObject.tag == "schilderij")
+            if (gameObject.tag == "Schilderij" || gameObject.tag == "schilderij")
             {
                 MeshRenderer[] spriteArray = GameObject.FindGameObjectWithTag("SurfacePlanes").GetComponentsInChildren<MeshRenderer>();
                 foreach (MeshRenderer i in spriteArray)
@@ -158,6 +156,7 @@ public class Placeable : MonoBehaviour
                 {
                     i.enabled = false;
                 }
+                SpriteBehaviourScript.centerPunt = transform.position;
                 Manager.GetComponent<ActivatePlacableChildren>().LoopDoorChildren();
                 this.GetComponent<BoxCollider>().size = new Vector3(this.GetComponent<BoxCollider>().size.x, this.GetComponent<BoxCollider>().size.y, 0.005f);
                 gameObject.tag = "Schilderij";
@@ -178,15 +177,7 @@ public class Placeable : MonoBehaviour
 
         if (IsPlacing)
         {
-            // Move the object.
             Move();
-
-            // Set the visual elements.
-            Vector3 targetPosition;
-            Vector3 surfaceNormal;
-            //bool canBePlaced = ValidatePlacement(out targetPosition, out surfaceNormal);
-            //DisplayBounds(canBePlaced);
-            //DisplayShadow(targetPosition, surfaceNormal, canBePlaced);
         }
         //else
         //{
@@ -374,33 +365,13 @@ public class Placeable : MonoBehaviour
     /// </remarks>
     public void OnPlacementStop()
     {
-        // ValidatePlacement requires a normal as an out parameter.
-        Vector3 position;
-        Vector3 surfaceNormal;
-
-        // Check to see if we can exit placement mode.
-        //if (!ValidatePlacement(out position, out surfaceNormal))
-        //{
-        //    return;
-        //}
-
-        // The object is allowed to be placed.
-        // We are placing at a small buffer away from the surface.
-        //targetPosition = position + (0.01f * surfaceNormal);
-
-        //OrientObject(true, surfaceNormal);
-
-        // If we are managing the collider, disable it. 
         if (managingBoxCollider)
         {
             boxCollider.enabled = false;
         }
 
-        // Tell the gesture manager that it is to resume
-        // its normal behavior.
         GestureManager.Instance.OverrideFocusedObject = null;
 
-        // Exit placement mode.
         IsPlacing = false;
     }
 

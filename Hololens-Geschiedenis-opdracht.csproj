@@ -108,6 +108,7 @@
     <Compile Include="Assets\Scripts\GazeGestureManager.cs" />
     <Compile Include="Assets\Scripts\SelectedScript.cs" />
     <Compile Include="Assets\Scripts\SpriteBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\TextManagerScript.cs" />
     <Compile Include="Assets\Scripts\WorldCursor.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpriteBehaviourScript : MonoBehaviour
 {
     public bool testLerp = false;
-    public static bool lerp1;
+    public static bool lerp1, lerp2;
     private float t;
     private bool heen = true;
     public float afstand = 5.0f;
@@ -14,20 +14,42 @@ public class SpriteBehaviourScript : MonoBehaviour
     private Vector3 sPos, begin, eind, start;
     public SpriteRenderer sprite;
     private Color c, sC, eC;
+    public static Vector3 centerPunt;
+    public static GameObject symbolToLerp;
+
+    
 
     void Start()
     {
         c = sprite.color;
         lerp1 = false;
+        lerp2 = false;
         t = 0f;
         sPos = Vector3.zero;
-
-
     }
 
     void Update()
     {
         BGLerp();
+        SymLerp();
+
+        if (Input.GetKeyDown("w"))
+        {
+            Debug.Log(centerPunt);
+        }
+    }
+
+    public void SymLerp()
+    {
+        if (lerp2)
+        {
+            symbolToLerp.transform.position = Vector3.Lerp(symbolToLerp.transform.position, centerPunt, snelheid * Time.deltaTime);
+            if (Vector3.Distance(symbolToLerp.transform.position, centerPunt) < .02f)
+            {
+
+                lerp2 = false;
+            }
+        }
     }
 
     public void BGLerp()
