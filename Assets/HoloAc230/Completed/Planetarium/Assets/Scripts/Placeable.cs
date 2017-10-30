@@ -129,6 +129,7 @@ public class Placeable : MonoBehaviour
                 SpriteBehaviourScript.lerp1 = true;         //Zegt tegen spritebehaviourscript dat de lerp moet beginne.
                 SpriteBehaviourScript.symbolToLerp = transform.parent.gameObject;
                 SpriteBehaviourScript.lerp2 = true;
+                SpriteBehaviourScript.lerp3 = true;
                 Destroy(GetComponent<Placeable>());
                 return;
             }

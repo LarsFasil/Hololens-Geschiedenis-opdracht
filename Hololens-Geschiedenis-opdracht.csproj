@@ -105,6 +105,7 @@
     <Compile Include="Assets\HoloAc230\Completed\Planetarium\Assets\hltksptlm\Utilities\Scripts\Singleton.cs" />
     <Compile Include="Assets\Scripts\ActivatePlacableChildren.cs" />
     <Compile Include="Assets\Scripts\CubeScript.cs" />
+    <Compile Include="Assets\Scripts\FadeObjectInOut.cs" />
     <Compile Include="Assets\Scripts\GazeGestureManager.cs" />
     <Compile Include="Assets\Scripts\SelectedScript.cs" />
     <Compile Include="Assets\Scripts\SpriteBehaviourScript.cs" />

@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class SpriteBehaviourScript : MonoBehaviour
 {
-    public bool testLerp = false;
-    public static bool lerp1, lerp2;
+    public bool testLerp = false, testlerp3 = false, textSpawned = false;
+    public static bool lerp1, lerp2, lerp3;
     private float t;
-    private bool heen = true;
+    private bool heen = true, lerpingRenderers = false;
     public float afstand = 5.0f;
     public float snelheid = .4f;
+    public float antOffset = 1f;
     public GameObject schilderij;
-    private Vector3 sPos, begin, eind, start;
+    private Vector3 sPos, begin, eind, start, offset;
     public SpriteRenderer sprite;
+    private SpriteRenderer textSprite;
     private Color c, sC, eC;
     public static Vector3 centerPunt;
     public static GameObject symbolToLerp;
+    public GameObject antwoorden;
+    private GameObject ant1;
 
-    
+
 
     void Start()
     {
@@ -26,16 +30,46 @@ public class SpriteBehaviourScript : MonoBehaviour
         lerp2 = false;
         t = 0f;
         sPos = Vector3.zero;
+
+
     }
 
     void Update()
     {
+        TextLerp();
         BGLerp();
         SymLerp();
+
 
         if (Input.GetKeyDown("w"))
         {
             Debug.Log(centerPunt);
+        }
+    }
+
+    public void TextLerp()
+    {
+        if (lerp3 || testlerp3)
+        {
+            if (!textSpawned)
+            {
+                textSpawned = true;
+                centerPunt = schilderij.transform.position;
+                offset = centerPunt + (schilderij.transform.right * antOffset);
+                ant1 = Instantiate(antwoorden, centerPunt, schilderij.transform.rotation);
+
+                ant1.GetComponent<FadeObjectInOut>().FadeOut(.001f);
+                ant1.GetComponent<FadeObjectInOut>().FadeIn(1);
+            }
+
+
+            ant1.transform.localPosition = Vector3.Lerp(ant1.transform.position, offset, snelheid * Time.deltaTime * 1.33f);
+
+            if (Vector3.Distance(ant1.transform.position, offset) < .02f)
+            {
+                testlerp3 = false;
+                lerp3 = false;
+            }
         }
     }
 
@@ -78,7 +112,7 @@ public class SpriteBehaviourScript : MonoBehaviour
 
             schilderij.transform.localPosition = Vector3.Lerp(start, eind, t);
             t += snelheid * Time.deltaTime;
-            sprite.color = Color.Lerp(sC, eC, t *3);
+            sprite.color = Color.Lerp(sC, eC, t * 3);
 
 
             if (Vector3.Distance(schilderij.transform.position, eind) < .02f)
