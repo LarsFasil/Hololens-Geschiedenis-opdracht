@@ -105,6 +105,7 @@
     <Compile Include="Assets\HoloAc230\Completed\Planetarium\Assets\hltksptlm\Utilities\Scripts\Singleton.cs" />
     <Compile Include="Assets\Scripts\ActivatePlacableChildren.cs" />
     <Compile Include="Assets\Scripts\AnswerManager.cs" />
+    <Compile Include="Assets\Scripts\AntwoordKlaarScript.cs" />
     <Compile Include="Assets\Scripts\CubeScript.cs" />
     <Compile Include="Assets\Scripts\DestroyVerts.cs" />
     <Compile Include="Assets\Scripts\FadeObjectInOut.cs" />
@@ -112,7 +113,6 @@
     <Compile Include="Assets\Scripts\SelectAnswerScript.cs" />
     <Compile Include="Assets\Scripts\SelectedScript.cs" />
     <Compile Include="Assets\Scripts\SpriteBehaviourScript.cs" />
-    <Compile Include="Assets\Scripts\TextManagerScript.cs" />
     <Compile Include="Assets\Scripts\WorldCursor.cs" />
   </ItemGroup>
   <ItemGroup>

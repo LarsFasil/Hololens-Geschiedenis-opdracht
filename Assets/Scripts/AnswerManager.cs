@@ -21,6 +21,7 @@ public class AnswerManager : MonoBehaviour {
     {
         if (symbolTag == antwoordTag)
         {
+            gameObject.GetComponent<SpriteBehaviourScript>().SchilderijReset();
             Debug.Log("GOED");
         }
         else

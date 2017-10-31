@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TextManagerScript : MonoBehaviour {
+public class AntwoordKlaarScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

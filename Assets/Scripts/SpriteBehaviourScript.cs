@@ -7,7 +7,7 @@ public class SpriteBehaviourScript : MonoBehaviour
     public bool testLerp = false, testlerp3 = false, textSpawned = false;
     public static bool lerp1, lerp2, lerp3;
     private float t;
-    private bool heen = true;
+    private bool heen = true, coRunning = false;
     public float afstand = 5.0f;
     public float snelheid = .4f;
     public float antOffset = 1f;
@@ -18,7 +18,7 @@ public class SpriteBehaviourScript : MonoBehaviour
     private Color c, sC, eC;
     public static Vector3 centerPunt;
     public static GameObject symbolToLerp;
-    private GameObject ant1;
+    private GameObject ant1, muur;
 
 
 
@@ -38,12 +38,36 @@ public class SpriteBehaviourScript : MonoBehaviour
         TextLerp();
         BGLerp();
         SymLerp();
-        
+
 
         if (Input.GetKeyDown("w"))
         {
-            Debug.Log(centerPunt);
+            StartCoroutine(lerpAntBack());
         }
+    }
+    public void SchilderijReset()
+    {
+        StartCoroutine(lerpAntBack());
+        //symbol to lerp laten verdwijnen met fade
+        //muur verdwijderen
+        //misschien meer
+        lerp1 = true;
+    }
+
+    IEnumerator lerpAntBack()
+    {
+        coRunning = true;
+        ant1.GetComponent<FadeObjectInOut>().FadeOut(1);
+        Vector3 end = ant1.transform.position + (ant1.transform.forward * 2f);
+        Debug.Log(end);
+        while (Vector3.Distance(ant1.transform.localPosition, end) > .1f)
+        {
+            ant1.transform.localPosition = Vector3.Lerp(ant1.transform.localPosition, end, Time.deltaTime * 1f);
+            yield return null;
+        }
+        Destroy(ant1);
+        textSpawned = false;
+        coRunning = false;
     }
 
     public void TextLerp()
@@ -55,6 +79,7 @@ public class SpriteBehaviourScript : MonoBehaviour
                 textSpawned = true;
                 centerPunt = schilderij.transform.position;
                 offset = centerPunt + (schilderij.transform.right * antOffset);
+
                 ant1 = Instantiate(antwoorden, centerPunt, schilderij.transform.rotation);
 
                 ant1.GetComponent<FadeObjectInOut>().FadeOut(.001f);
@@ -62,6 +87,7 @@ public class SpriteBehaviourScript : MonoBehaviour
             }
 
             ant1.transform.localPosition = Vector3.Lerp(ant1.transform.position, offset, snelheid * Time.deltaTime * 1.33f);
+
 
             if (Vector3.Distance(ant1.transform.position, offset) < .02f)
             {
@@ -78,7 +104,7 @@ public class SpriteBehaviourScript : MonoBehaviour
             symbolToLerp.transform.position = Vector3.Lerp(symbolToLerp.transform.position, centerPunt, snelheid * Time.deltaTime);
             if (Vector3.Distance(symbolToLerp.transform.position, centerPunt) < .02f)
             {
-                GameObject muur = Instantiate(muurprefab, symbolToLerp.transform.position, symbolToLerp.transform.rotation);
+                muur = Instantiate(muurprefab, symbolToLerp.transform.position, symbolToLerp.transform.rotation);
                 muur.transform.Translate(Vector3.forward * .008f);
                 lerp2 = false;
             }
