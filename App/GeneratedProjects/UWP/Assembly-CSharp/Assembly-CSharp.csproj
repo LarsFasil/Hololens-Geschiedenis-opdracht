@@ -5,14 +5,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{338fda7d-41b1-402c-869e-146b762f2971}</ProjectGuid>
+    <ProjectGuid>{319cb723-31b1-403b-8b0c-539492c3ed22}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AssemblyCSharpWSA</RootNamespace>
     <AssemblyName>Assembly-CSharp</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.15063.0</TargetPlatformVersion>
+    <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -131,7 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Projecten\Hololens-Geschiedenis-opdracht\App\GeneratedProjects\UWP\Assembly-CSharp-firstpass\Assembly-CSharp-firstpass.csproj">
-      <Project>{01d7bc5e-0c5f-49d6-a9b5-3dd487cb9967}</Project>
+      <Project>{d08f4cb2-a83b-4098-a7db-b65b6115e618}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <Reference Include="UnityEngine">
@@ -162,10 +162,10 @@
       <HintPath>$(UnityWSASolutionDir)$(UnityWSASolutionName)\Unprocessed\UnityEngine.VR.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <SDKReference Include="WindowsDesktop, Version=10.0.15063.0"/>
-    <SDKReference Include="WindowsIoT, Version=10.0.15063.0"/>
-    <SDKReference Include="WindowsMobile, Version=10.0.15063.0"/>
-    <SDKReference Include="WindowsTeam, Version=10.0.15063.0"/>
+    <SDKReference Include="WindowsDesktop, Version=10.0.16299.0"/>
+    <SDKReference Include="WindowsIoT, Version=10.0.16299.0"/>
+    <SDKReference Include="WindowsMobile, Version=10.0.16299.0"/>
+    <SDKReference Include="WindowsTeam, Version=10.0.16299.0"/>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(UnityProjectDir)Assets\**\*.cs" Exclude="$(UnityProjectDir)Assets\**\Editor\**\*.cs;$(UnityProjectDir)Assets\Plugins\**\*.cs;$(UnityProjectDir)Assets\Standard Assets\**\*.cs;$(UnityProjectDir)Assets\Standard Assets (Mobile)\**\*.cs;$(UnityProjectDir)Assets\Pro Standard Assets\**\*.cs">

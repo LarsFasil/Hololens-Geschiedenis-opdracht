@@ -5,14 +5,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{01d7bc5e-0c5f-49d6-a9b5-3dd487cb9967}</ProjectGuid>
+    <ProjectGuid>{d08f4cb2-a83b-4098-a7db-b65b6115e618}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AssemblyCSharpWSA</RootNamespace>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion>10.0.15063.0</TargetPlatformVersion>
+    <TargetPlatformVersion>10.0.16299.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -159,10 +159,10 @@
       <HintPath>$(UnityWSASolutionDir)$(UnityWSASolutionName)\Unprocessed\UnityEngine.VR.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <SDKReference Include="WindowsDesktop, Version=10.0.15063.0"/>
-    <SDKReference Include="WindowsIoT, Version=10.0.15063.0"/>
-    <SDKReference Include="WindowsMobile, Version=10.0.15063.0"/>
-    <SDKReference Include="WindowsTeam, Version=10.0.15063.0"/>
+    <SDKReference Include="WindowsDesktop, Version=10.0.16299.0"/>
+    <SDKReference Include="WindowsIoT, Version=10.0.16299.0"/>
+    <SDKReference Include="WindowsMobile, Version=10.0.16299.0"/>
+    <SDKReference Include="WindowsTeam, Version=10.0.16299.0"/>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(UnityProjectDir)Assets\Plugins\**\*.cs" Exclude="$(UnityProjectDir)Assets\Plugins\**\Editor\**\*.cs">
