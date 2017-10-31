@@ -52,7 +52,16 @@ namespace Academy.HoloToolkit.Unity
             if (focusedObject != null)
             {
                 //focusedObject.SendMessage("OnSelect");
-                focusedObject.GetComponent<Placeable>().OnSelect();
+                if (focusedObject.GetComponent<Placeable>() != null)
+                {
+                    focusedObject.GetComponent<Placeable>().OnSelect();
+                }
+                if (focusedObject.GetComponent<SelectAnswerScript>() != null)
+                {
+                    Debug.Log("antwoord klikt");
+                    focusedObject.GetComponent<SelectAnswerScript>().OnSelect();
+                }
+
             }
         }
 

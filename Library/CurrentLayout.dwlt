@@ -70,7 +70,7 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 442}
   m_MaxSize: {x: 4004, y: 8042}
   vertical: 1
-  controlID: 92
+  controlID: 138
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 563}
   m_MaxSize: {x: 12008, y: 12063}
   vertical: 1
-  controlID: 88
+  controlID: 134
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 563}
   m_MaxSize: {x: 12008, y: 12063}
   vertical: 0
-  controlID: 89
+  controlID: 135
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,8 +161,8 @@ MonoBehaviour:
     y: 0
     width: 273
     height: 671
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 563}
   m_MaxSize: {x: 8006, y: 12063}
   vertical: 1
-  controlID: 90
+  controlID: 136
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 442}
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 0
-  controlID: 91
+  controlID: 137
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -325,8 +325,8 @@ MonoBehaviour:
     y: 0
     width: 1258
     height: 450
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Mode: 1
   m_RoomIndex: 0
   m_Hand: 1
-  m_RemoteMachineAddress: 10.16.254.17
+  m_RemoteMachineAddress: 10.16.254.21
   m_EnableVideo: 1
   m_EnableAudio: 1
   m_MaxBitrateKbps: 99999
@@ -428,19 +428,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/HoloAc230/Completed/Planetarium/Assets/Scripts
+    - Assets/HoloAc230/Completed/Planetarium/Assets/hltksptlm/SpatialMapping/Scripts
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/HoloAc230/Completed/Planetarium/Assets/Scripts
+  - Assets/HoloAc230/Completed/Planetarium/Assets/hltksptlm/SpatialMapping/Scripts
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Projecten\Hololens-Geschiedenis-opdracht
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 311}
-    m_SelectedIDs: 22260000
-    m_LastClickedID: 9762
-    m_ExpandedIDs: 00000000262500006a250000d8250000e0250000562600007c260000a22600000227000008270000f6270000322a0000342a0000362a0000382a00003a2a00003c2a00003e2a0000
+    scrollPos: {x: 0, y: 335}
+    m_SelectedIDs: 2a260000
+    m_LastClickedID: 9770
+    m_ExpandedIDs: 00000000282500006c250000da250000e2250000582600007c2600007e260000a4260000042700000a270000f82700003a2a00003c2a00003e2a0000402a0000422a0000442a0000462a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -468,7 +468,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: a8280000
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000262500006a250000d8250000e0250000562600007c260000a22600000227000008270000f6270000322a0000342a0000362a0000382a00003a2a00003c2a00003e2a0000
+    m_ExpandedIDs: 00000000282500006c250000da250000e2250000582600007e260000a4260000042700000a270000f82700003a2a00003c2a00003e2a0000402a0000422a0000442a0000462a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -493,24 +493,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 7a280000
-    m_LastClickedInstanceID: 10362
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: f4270000ea2600003c2600001e2c0000402c0000182600000a2500009e250000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: DestroyVerts
+      m_OriginalName: DestroyVerts
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 16906
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 8}
     m_CreateAssetUtility:
@@ -586,7 +586,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 06f5ffffc0f5ffffb2f6ffffdefbffff00000000
+    m_ExpandedIDs: c81dfaff9a28fbff023bfcff8a54fdff3480fdffdcfbffffdefbffff000000004e290000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -636,14 +636,14 @@ MonoBehaviour:
     width: 1254
     height: 429
   m_SceneLighting: 1
-  lastFramingTime: 6255.305937340247
+  lastFramingTime: 9339.161077765124
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.8500816, y: 0.2857873, z: 2.5}
+    m_Target: {x: 0.5284345, y: -0.6759702, z: 4.3036304}
     speed: 2
-    m_Value: {x: 0.8500816, y: 0.2857873, z: 2.5}
+    m_Value: {x: 0.5284345, y: -0.6759702, z: 4.3036304}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -666,18 +666,18 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.06445537, y: 0.0029941716, z: -0.00019000315, w: -0.9979272}
+    m_Target: {x: 0.21974427, y: 0.061413307, z: -0.013862234, w: 0.9735243}
     speed: 2
-    m_Value: {x: -0.06445537, y: 0.0029941716, z: -0.00019000315, w: -0.99792725}
+    m_Value: {x: 0.21974419, y: 0.061413284, z: -0.013862229, w: 0.9735239}
   m_Size:
-    m_Target: 4.7611537
+    m_Target: 6.0913043
     speed: 2
-    m_Value: 4.7611537
+    m_Value: 6.0913043
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
-  m_LastSceneViewRotation: {x: -0.1211989, y: 0.0074453447, z: -0.0009050211, w: -0.9926108}
+  m_LastSceneViewRotation: {x: 0.14630201, y: 0.047462802, z: -0.0070262398, w: 0.98807573}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 

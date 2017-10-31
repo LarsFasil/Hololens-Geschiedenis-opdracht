@@ -230,6 +230,7 @@ namespace Academy.HoloToolkit.Unity
                 }
             }
 
+            GameObject.Find("SceneManager").GetComponent<DestroyVerts>().DestroyAllVerts();
             Debug.Log("Finished removing vertices.");
 
             // We are done removing vertices, trigger an event.

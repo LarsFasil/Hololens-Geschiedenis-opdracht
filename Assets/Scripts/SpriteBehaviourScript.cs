@@ -7,18 +7,17 @@ public class SpriteBehaviourScript : MonoBehaviour
     public bool testLerp = false, testlerp3 = false, textSpawned = false;
     public static bool lerp1, lerp2, lerp3;
     private float t;
-    private bool heen = true, lerpingRenderers = false;
+    private bool heen = true;
     public float afstand = 5.0f;
     public float snelheid = .4f;
     public float antOffset = 1f;
-    public GameObject schilderij;
+    public GameObject schilderij, antwoorden, muurprefab;
     private Vector3 sPos, begin, eind, start, offset;
     public SpriteRenderer sprite;
     private SpriteRenderer textSprite;
     private Color c, sC, eC;
     public static Vector3 centerPunt;
     public static GameObject symbolToLerp;
-    public GameObject antwoorden;
     private GameObject ant1;
 
 
@@ -39,7 +38,7 @@ public class SpriteBehaviourScript : MonoBehaviour
         TextLerp();
         BGLerp();
         SymLerp();
-
+        
 
         if (Input.GetKeyDown("w"))
         {
@@ -62,7 +61,6 @@ public class SpriteBehaviourScript : MonoBehaviour
                 ant1.GetComponent<FadeObjectInOut>().FadeIn(1);
             }
 
-
             ant1.transform.localPosition = Vector3.Lerp(ant1.transform.position, offset, snelheid * Time.deltaTime * 1.33f);
 
             if (Vector3.Distance(ant1.transform.position, offset) < .02f)
@@ -80,7 +78,8 @@ public class SpriteBehaviourScript : MonoBehaviour
             symbolToLerp.transform.position = Vector3.Lerp(symbolToLerp.transform.position, centerPunt, snelheid * Time.deltaTime);
             if (Vector3.Distance(symbolToLerp.transform.position, centerPunt) < .02f)
             {
-
+                GameObject muur = Instantiate(muurprefab, symbolToLerp.transform.position, symbolToLerp.transform.rotation);
+                muur.transform.Translate(Vector3.forward * .008f);
                 lerp2 = false;
             }
         }
