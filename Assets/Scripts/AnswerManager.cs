@@ -22,6 +22,9 @@ public class AnswerManager : MonoBehaviour {
         if (symbolTag == antwoordTag)
         {
             gameObject.GetComponent<SpriteBehaviourScript>().SchilderijReset();
+            ScoreScript.score++;
+            GetComponent<ScoreScript>().UpdateScore();
+            
             Debug.Log("GOED");
         }
         else

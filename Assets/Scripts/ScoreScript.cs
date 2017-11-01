@@ -1,17 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreScript : MonoBehaviour {
     public static int score = 0;
+    public static GameObject text;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void UpdateScore()
+    {
+        text.GetComponent<TextMesh>().text = score.ToString() + "/12";
+        if (score == 12)
+        {
+            //endtext.gameObject.SetActive(true);
+        }
+    }
 }

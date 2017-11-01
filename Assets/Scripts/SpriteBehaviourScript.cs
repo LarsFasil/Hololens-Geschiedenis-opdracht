@@ -7,18 +7,18 @@ public class SpriteBehaviourScript : MonoBehaviour
     public bool testLerp = false, testlerp3 = false, textSpawned = false;
     public static bool lerp1, lerp2, lerp3;
     private float t;
-    private bool heen = true, coRunning = false;
+    private bool heen = true;
     public float afstand = 5.0f;
     public float snelheid = .4f;
     public float antOffset = 1f;
-    public GameObject schilderij, antwoorden, muurprefab;
-    private Vector3 sPos, begin, eind, start, offset;
+    public GameObject schilderij, antwoorden, muurprefab, scorePrefab;
+    private Vector3 sPos, begin, eind, start, offset, offset2;
     public SpriteRenderer sprite;
     private SpriteRenderer textSprite;
     private Color c, sC, eC;
     public static Vector3 centerPunt;
     public static GameObject symbolToLerp;
-    private GameObject ant1, muur;
+    private GameObject ant1, score, muur;
 
 
 
@@ -47,27 +47,36 @@ public class SpriteBehaviourScript : MonoBehaviour
     }
     public void SchilderijReset()
     {
+        muur.transform.Translate(Vector3.forward * -.2f);
         StartCoroutine(lerpAntBack());
         symbolToLerp.GetComponent<FadeObjectInOut>().FadeOut(1);
-        lerp1 = true;
+        if (ScoreScript.score < 11)
+        {
+            lerp1 = true;
+            return;
+        }
+        Destroy(schilderij);
     }
+
 
     IEnumerator lerpAntBack()
     {
-        coRunning = true;
         ant1.GetComponent<FadeObjectInOut>().FadeOut(1);
+        score.GetComponent<FadeObjectInOut>().FadeOut(1);
+
         Vector3 end = ant1.transform.position + (ant1.transform.forward * 2f);
         Debug.Log(end);
         while (Vector3.Distance(ant1.transform.localPosition, end) > .1f)
         {
+            score.transform.localPosition = Vector3.Lerp(score.transform.localPosition, end, Time.deltaTime * 1f);
             ant1.transform.localPosition = Vector3.Lerp(ant1.transform.localPosition, end, Time.deltaTime * 1f);
             yield return null;
         }
+        Destroy(score);
         Destroy(ant1);
         Destroy(symbolToLerp);
         Destroy(muur);
         textSpawned = false;
-        coRunning = false;
     }
 
     public void TextLerp()
@@ -79,17 +88,28 @@ public class SpriteBehaviourScript : MonoBehaviour
                 textSpawned = true;
                 centerPunt = schilderij.transform.position;
                 offset = centerPunt + (schilderij.transform.right * antOffset);
+                offset2 = centerPunt + (schilderij.transform.up * .8f);
+                if (symbolToLerp.name == "Arnolfini_Bed")
+                {
+                    offset2 = centerPunt + (schilderij.transform.up * 1f);
+                }
 
                 ant1 = Instantiate(antwoorden, centerPunt, schilderij.transform.rotation);
+                score = Instantiate(scorePrefab, centerPunt, schilderij.transform.rotation);
+                ScoreScript.text = score.GetComponentInChildren<TextMesh>().gameObject;
+                GetComponent<ScoreScript>().UpdateScore();
 
                 ant1.GetComponent<FadeObjectInOut>().FadeOut(.001f);
                 ant1.GetComponent<FadeObjectInOut>().FadeIn(1);
+
+                score.GetComponent<FadeObjectInOut>().FadeOut(.001f);
+                score.GetComponent<FadeObjectInOut>().FadeIn(1);
             }
 
             ant1.transform.localPosition = Vector3.Lerp(ant1.transform.position, offset, snelheid * Time.deltaTime * 1.33f);
+            score.transform.localPosition = Vector3.Lerp(score.transform.position, offset2, snelheid * Time.deltaTime * 1.33f);
 
-
-            if (Vector3.Distance(ant1.transform.position, offset) < .02f)
+            if (Vector3.Distance(ant1.transform.position, offset) < .02f && Vector3.Distance(score.transform.position, offset2) < .02f)
             {
                 testlerp3 = false;
                 lerp3 = false;
