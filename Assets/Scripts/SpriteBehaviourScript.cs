@@ -48,9 +48,7 @@ public class SpriteBehaviourScript : MonoBehaviour
     public void SchilderijReset()
     {
         StartCoroutine(lerpAntBack());
-        //symbol to lerp laten verdwijnen met fade
-        //muur verdwijderen
-        //misschien meer
+        symbolToLerp.GetComponent<FadeObjectInOut>().FadeOut(1);
         lerp1 = true;
     }
 
@@ -66,6 +64,8 @@ public class SpriteBehaviourScript : MonoBehaviour
             yield return null;
         }
         Destroy(ant1);
+        Destroy(symbolToLerp);
+        Destroy(muur);
         textSpawned = false;
         coRunning = false;
     }
