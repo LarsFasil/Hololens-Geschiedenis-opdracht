@@ -32,6 +32,8 @@ namespace Academy.HoloToolkit.Unity
             get { return focusedObject; }
         }
 
+        public WorldCursor cursor;
+
         private GestureRecognizer gestureRecognizer;
         private GameObject focusedObject;
 
@@ -51,6 +53,7 @@ namespace Academy.HoloToolkit.Unity
         {
             if (focusedObject != null)
             {
+                cursor.Clicked();
                 //focusedObject.SendMessage("OnSelect");
                 if (focusedObject.GetComponent<Placeable>() != null)
                 {
@@ -58,7 +61,7 @@ namespace Academy.HoloToolkit.Unity
                 }
                 if (focusedObject.GetComponent<SelectAnswerScript>() != null)
                 {
-                    Debug.Log("antwoord klikt");
+                    //Debug.Log("antwoord klikt");
                     focusedObject.GetComponent<SelectAnswerScript>().OnSelect();
                 }
 

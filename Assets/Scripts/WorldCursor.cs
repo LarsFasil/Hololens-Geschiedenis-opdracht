@@ -3,6 +3,7 @@
 public class WorldCursor : MonoBehaviour
 {
     private MeshRenderer meshRenderer;
+    public GameObject open, closed;
 
     // Use this for initialization
     void Start()
@@ -37,5 +38,18 @@ public class WorldCursor : MonoBehaviour
             // If the raycast did not hit a hologram, hide the cursor mesh.
             meshRenderer.enabled = false;
         }
+    }
+
+    public void Clicked()
+    {
+        closed.SetActive(!closed.activeSelf);
+        open.SetActive(!open.activeSelf);
+        Invoke("ChangeActives", .2f);
+    }
+
+    void ChangeActives()
+    {
+        closed.SetActive(!closed.activeSelf);
+        open.SetActive(!open.activeSelf);
     }
 }

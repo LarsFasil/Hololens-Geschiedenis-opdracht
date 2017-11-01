@@ -18,6 +18,10 @@ public class SelectAnswerScript : MonoBehaviour {
 
     public void OnSelect()
     {
-        GameObject.Find("SceneManager").GetComponent<AnswerManager>().CheckAnswer(gameObject.tag);
+        if (!SpriteBehaviourScript.lerp3)
+        {
+            GameObject.Find("SceneManager").GetComponent<AnswerManager>().CheckAnswer(gameObject.tag);
+        }
+        
     }
 }

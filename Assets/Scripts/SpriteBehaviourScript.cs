@@ -38,12 +38,6 @@ public class SpriteBehaviourScript : MonoBehaviour
         TextLerp();
         BGLerp();
         SymLerp();
-
-
-        if (Input.GetKeyDown("w"))
-        {
-            StartCoroutine(lerpAntBack());
-        }
     }
     public void SchilderijReset()
     {
