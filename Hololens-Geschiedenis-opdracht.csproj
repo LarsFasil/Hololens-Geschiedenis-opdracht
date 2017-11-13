@@ -113,6 +113,7 @@
     <Compile Include="Assets\Scripts\ScoreScript.cs" />
     <Compile Include="Assets\Scripts\SelectAnswerScript.cs" />
     <Compile Include="Assets\Scripts\SelectedScript.cs" />
+    <Compile Include="Assets\Scripts\SpeechManager.cs" />
     <Compile Include="Assets\Scripts\SpriteBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\WorldCursor.cs" />
   </ItemGroup>
