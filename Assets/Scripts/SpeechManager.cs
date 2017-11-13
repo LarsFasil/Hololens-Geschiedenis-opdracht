@@ -12,9 +12,10 @@ public class SpeechManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        keywords.Add("Reset world", () =>
+        keywords.Add("Reset", () =>
         {
             // Call the OnReset method on every descendant object.
+            Debug.Log("reset world");
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         });
 
