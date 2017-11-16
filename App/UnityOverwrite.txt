@@ -5,12 +5,12 @@
 # Write a line equal to 'overwrite-all' (without quotes) to overwrite everything (preserved accross builds)
 # Write a line equal to 'keep-all' (without quotes) to keep files regardless their modification (preserved accross builds)
 # Default behavior is to never overwrite files
-Hololens-Geschiedenis-opdracht.sln: modified
+Hololens-Geschiedenis-opdracht.sln: 240C6060CD979720DD30A441B527AE97
 GeneratedProjects\UWP\Assembly-CSharp\project.json: 4FCF72A4D5EDB37E24C206A7BCFE7AF1
 GeneratedProjects\UWP\Assembly-CSharp-firstpass\project.json: 4FCF72A4D5EDB37E24C206A7BCFE7AF1
 Hololens-Geschiedenis-opdracht\App.cs: CFA84494393EAEF9D34DAE0D077EA5F9
-Hololens-Geschiedenis-opdracht\Hololens-Geschiedenis-opdracht.csproj: 6E60DDDFE22AA57EB9A0FA156E6C5683
-Hololens-Geschiedenis-opdracht\Hololens-Geschiedenis-opdracht.csproj.user: modified
+Hololens-Geschiedenis-opdracht\Hololens-Geschiedenis-opdracht.csproj: 5753981667CC6FEAE762A5A149DBB898
+Hololens-Geschiedenis-opdracht\Hololens-Geschiedenis-opdracht.csproj.user: BEFB8AC4886C4CFDD3C68445D6F19B04
 Hololens-Geschiedenis-opdracht\Package.appxmanifest: 436E8009EB8DA7586849E6343E408CC1
 Hololens-Geschiedenis-opdracht\project.json: 1D02BC64BAC0D041019673A1C4C51737
 Hololens-Geschiedenis-opdracht\Assets\SplashScreen.scale-200.png: 60618416282ED104FD1473935716045D
@@ -19,6 +19,5 @@ Hololens-Geschiedenis-opdracht\Assets\Square44x44Logo.scale-200.png: 6C6EF27184A
 Hololens-Geschiedenis-opdracht\Assets\Square44x44Logo.targetsize-24_altform-unplated.png: 156637F7B5363E983E7A46D8E533A23D
 Hololens-Geschiedenis-opdracht\Assets\StoreLogo.png: 90BD194CA4A7CFFF3E8B8222229857FB
 Hololens-Geschiedenis-opdracht\Assets\Wide310x150Logo.scale-200.png: C96846A80DF667F87355569CD816192D
-Hololens-Geschiedenis-opdracht\obj\x86\Release\Hololens-Geschiedenis-opdracht.csproj.CopyComplete: D41D8CD98F00B204E9800998ECF8427E
 Hololens-Geschiedenis-opdracht\Properties\AssemblyInfo.cs: EEC60E4A82EAAB53249EAE5A796E792C
 Hololens-Geschiedenis-opdracht\Properties\Default.rd.xml: 72EB282657164E79A1C42F6240984826

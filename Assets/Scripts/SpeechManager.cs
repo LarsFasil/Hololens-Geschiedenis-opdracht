@@ -12,13 +12,15 @@ public class SpeechManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        keywords.Add("Reset", () =>
+        keywords.Add("stop", () =>
         {
             // Call the OnReset method on every descendant object.
             Debug.Log("reset world");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+            SceneManager.LoadSceneAsync(scene.name);
         });
-
+            
         // Tell the KeywordRecognizer about our keywords.
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
 

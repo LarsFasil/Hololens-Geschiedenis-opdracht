@@ -5,16 +5,13 @@ using UnityEngine;
 public class AnswerManager : MonoBehaviour {
 
     public static string symbolTag;
-    
+    public GameObject goed, fout;
+    public AudioClip audio_goed, audio_fout;
+    AudioSource audiosource;
 
 	// Use this for initialization
 	void Start () {
-	    
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+        audiosource = GetComponent<AudioSource>();
 	}
 
     public void CheckAnswer(string antwoordTag)
@@ -24,11 +21,15 @@ public class AnswerManager : MonoBehaviour {
             gameObject.GetComponent<SpriteBehaviourScript>().SchilderijReset();
             ScoreScript.score++;
             GetComponent<ScoreScript>().UpdateScore();
-            
+
+            audiosource.PlayOneShot(audio_goed);
+            Instantiate(goed, SpriteBehaviourScript.symbolToLerp.transform);
             Debug.Log("GOED");
         }
         else
         {
+            audiosource.PlayOneShot(audio_fout);
+            Instantiate(fout, SpriteBehaviourScript.symbolToLerp.transform);
             Debug.Log("Fout");
         }
 
