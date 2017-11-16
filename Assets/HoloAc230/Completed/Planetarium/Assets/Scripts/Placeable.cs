@@ -120,7 +120,6 @@ public class Placeable : MonoBehaviour
     /// </summary>
     public void OnSelect()
     {
-        Debug.Log("OnSELECT   " + this.GetComponent<BoxCollider>().size.z);
         if (!IsPlacing)
         {
             if (gameObject.tag != "Schilderij" && gameObject.tag != "schilderij")
@@ -153,20 +152,18 @@ public class Placeable : MonoBehaviour
         {
             OnPlacementStop();
             if (gameObject.tag == "schilderij")
-            {
-                Debug.Log("changed");
+            {    
                 GameObject Manager = GameObject.FindGameObjectWithTag("SceneManager");
                 MeshRenderer[] spriteArray = GameObject.FindGameObjectWithTag("SurfacePlanes").GetComponentsInChildren<MeshRenderer>();
                 foreach (MeshRenderer i in spriteArray)
                 {
-                    //i.enabled = false;
                     i.gameObject.SetActive(false);
                 }
                 SpriteBehaviourScript.centerPunt = transform.position;
                 Manager.GetComponent<ActivatePlacableChildren>().LoopDoorChildren();
                 this.GetComponent<BoxCollider>().size = new Vector3(this.GetComponent<BoxCollider>().size.x, this.GetComponent<BoxCollider>().size.y, 0.005f);
                 gameObject.tag = "Schilderij";
-                gameObject.GetComponent<Placeable>().enabled = false;
+                Destroy(gameObject.GetComponent<Placeable>()); 
             }
             
             return;
@@ -179,33 +176,10 @@ public class Placeable : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        /* TODO: 4.a CODE ALONG 4.a */
-
         if (IsPlacing)
         {
             Move();
         }
-        //else
-        //{
-        //    // Disable the visual elements.
-        //    //boundsAsset.SetActive(false);
-        //    //shadowAsset.SetActive(false);
-
-        //    // Gracefully place the object on the target surface.
-        //    float dist = (gameObject.transform.position - targetPosition).magnitude;
-        //    if (dist > 0)
-        //    {
-        //        gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, targetPosition, placementVelocity / dist);
-        //    }
-        //    else
-        //    {
-        //        // Unhide the child object(s) to make placement easier.
-        //        for (int i = 0; i < ChildrenToHide.Count; i++)
-        //        {
-        //            ChildrenToHide[i].SetActive(true);
-        //        }
-        //    }
-        //}
     }
 
     /// <summary>

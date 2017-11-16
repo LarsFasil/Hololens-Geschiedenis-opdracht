@@ -20,7 +20,12 @@ public class SpeechManager : MonoBehaviour
             SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
             SceneManager.LoadSceneAsync(scene.name);
         });
-            
+
+        keywords.Add("move", () =>
+        {
+            GetComponent<SpriteBehaviourScript>().MovePainting();
+        });
+
         // Tell the KeywordRecognizer about our keywords.
         keywordRecognizer = new KeywordRecognizer(keywords.Keys.ToArray());
 

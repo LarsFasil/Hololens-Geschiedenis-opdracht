@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpriteBehaviourScript : MonoBehaviour
 {
     public bool testLerp = false, testlerp3 = false, textSpawned = false;
-    public static bool lerp1, lerp2, lerp3;
+    public static bool lerp1, lerp2, lerp3, moved;
     private float t;
     private bool heen = true;
     public float afstand = 5.0f;
@@ -29,7 +29,7 @@ public class SpriteBehaviourScript : MonoBehaviour
         lerp2 = false;
         t = 0f;
         sPos = Vector3.zero;
-
+        moved = false;
 
     }
 
@@ -39,6 +39,16 @@ public class SpriteBehaviourScript : MonoBehaviour
         BGLerp();
         SymLerp();
     }
+
+    public void MovePainting()
+    {
+        if (!moved)
+        {
+            schilderij.GetComponent<Placeable>().OnPlacementStart();
+            moved = true;
+        }
+    }
+
     public void SchilderijReset()
     {
         muur.transform.Translate(Vector3.forward * -.2f);

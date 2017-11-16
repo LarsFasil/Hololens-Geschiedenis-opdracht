@@ -6,7 +6,7 @@ public class DestroySelfScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Invoke("SuicideMethod", 1f);
+        Invoke("SuicideMethod", 2f);
 	}
 	
 	// Update is called once per frame

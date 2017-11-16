@@ -23,13 +23,13 @@ public class AnswerManager : MonoBehaviour {
             GetComponent<ScoreScript>().UpdateScore();
 
             audiosource.PlayOneShot(audio_goed);
-            Instantiate(goed, SpriteBehaviourScript.symbolToLerp.transform);
+            Instantiate(goed, SpriteBehaviourScript.centerPunt, SpriteBehaviourScript.symbolToLerp.transform.rotation);
             Debug.Log("GOED");
         }
         else
         {
             audiosource.PlayOneShot(audio_fout);
-            Instantiate(fout, SpriteBehaviourScript.symbolToLerp.transform);
+            Instantiate(fout, SpriteBehaviourScript.centerPunt, SpriteBehaviourScript.symbolToLerp.transform.rotation);
             Debug.Log("Fout");
         }
 
