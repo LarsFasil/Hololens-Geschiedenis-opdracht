@@ -93,7 +93,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 563}
   m_MaxSize: {x: 12008, y: 12063}
   vertical: 1
-  controlID: 62
+  controlID: 63
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 563}
   m_MaxSize: {x: 12008, y: 12063}
   vertical: 0
-  controlID: 63
+  controlID: 64
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 676
     width: 1530
     height: 271
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 17}
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 563}
   m_MaxSize: {x: 8006, y: 12063}
   vertical: 1
-  controlID: 64
+  controlID: 65
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 442}
   m_MaxSize: {x: 8006, y: 8042}
   vertical: 0
-  controlID: 101
+  controlID: 128
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -428,19 +428,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\lars_\Desktop\Hololens projects Lars Fasil\Projecten\Hololens-Geschiedenis-opdracht
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 455}
-    m_SelectedIDs: 3e260000
-    m_LastClickedID: 9790
-    m_ExpandedIDs: 000000002e25000084250000fa250000022600007c260000a4260000a6260000cc260000ce2600002c2700003227000026280000ec2a0000ee2a0000f02a0000f22a0000f42a0000f62a0000f82a0000
+    scrollPos: {x: 0, y: 423}
+    m_SelectedIDs: 10280000
+    m_LastClickedID: 10256
+    m_ExpandedIDs: 000000002e25000084250000fa250000022600007c260000a4260000a6260000cc260000ce2600002c2700003227000026280000ec2a0000ee2a0000f02a0000f22a0000f42a0000f62a0000f82a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -520,7 +520,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 27}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_DirectoriesAreaWidth: 199
 --- !u!114 &18
@@ -586,7 +586,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: c8f5ffff7af6ffff6af7ffffdcfbffff00000000
+    m_ExpandedIDs: 74aafeff32abfeff22acfeff303bffff803cffffdcfbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -636,7 +636,7 @@ MonoBehaviour:
     width: 1272
     height: 406
   m_SceneLighting: 1
-  lastFramingTime: 263.5277744552463
+  lastFramingTime: 4927.139979764796
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
@@ -666,13 +666,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.07497201, y: 0.27168074, z: -0.021234356, w: -0.95922774}
+    m_Target: {x: -0.1531272, y: -0.5690884, z: 0.108857006, w: -0.80052507}
     speed: 2
-    m_Value: {x: -0.07497201, y: 0.27168074, z: -0.021234356, w: -0.9592278}
+    m_Value: {x: -0.15312721, y: -0.56908846, z: 0.10885702, w: -0.8005252}
   m_Size:
-    m_Target: 3.1554782
+    m_Target: 0.73460466
     speed: 2
-    m_Value: 3.1554782
+    m_Value: 0.73460466
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -726,8 +726,8 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
+    m_HSlider: 1
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoom: 0
@@ -739,18 +739,18 @@ MonoBehaviour:
       y: 17
       width: 1272
       height: 211
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 636, y: 105.5}
+    m_Scale: {x: 1.0609, y: 1.0609}
+    m_Translation: {x: 627.91595, y: 110.60075}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -636
-      y: -105.5
-      width: 1272
-      height: 211
+      x: -591.87103
+      y: -104.25182
+      width: 1198.982
+      height: 198.88774
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
